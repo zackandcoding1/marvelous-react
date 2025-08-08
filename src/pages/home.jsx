@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import ComicsList from "../components/Comic/ComicsList";
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      <ComicsList/>
+    </>
   );
-}
+};
 
-export default Home
+export default Home;
