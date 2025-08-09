@@ -16,7 +16,7 @@ const ComicCard = ({ title, thumbnail }) => {
           }
           alt={title}
         />
-        <h3>teste</h3>
+        <h3>{title}</h3>
       </Card>
     </>
   );
