@@ -12,7 +12,7 @@ const ComicsList = () => {
         const response = await marvelApi.get("/comics", {
           params: { limit: 12 },
         });
-        setComics(reponse.data.data.results);
+        setComics(response.data.data.results);
       } catch (error) {
         console.error("Erro ao buscar quadrinhos:", error);
       }

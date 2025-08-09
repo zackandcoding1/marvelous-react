@@ -1,21 +1,14 @@
-import { HomeBanner, Card } from "./ComicCard.style";
-import homeBanner from "../../assets/home-banner.jpg";
+import { Card } from "./ComicCard.style";
 import placeholderImg from "../../assets/placeholder.png";
 
 const ComicCard = ({ title, thumbnail }) => {
+  const hasThumb = thumbnail?.path && thumbnail?.extension;
+  const src = hasThumb ? `${thumbnail.path}.${thumbnail.extension}` : placeholderImg;
+
   return (
     <>
-      <HomeBanner src={homeBanner} alt="home banner" />
-
       <Card>
-        <img
-          src={
-            thumbnail && thumbnail.path && thumbnail.extension
-              ? `${thumbnail.path}.${thumbnail.extension}`
-              : placeholderImg
-          }
-          alt={title}
-        />
+        <img src={src} alt={title}/>
         <h3>{title}</h3>
       </Card>
     </>

@@ -1,13 +1,5 @@
 import styled from "styled-components";
 
-export const HomeBanner = styled.img`
-    width: 100%;
-    height: auto;
-    display: block;
-    max-width: 100%;
-    object-fit: cover;
-`;
-
 export const Card = styled.div`
   border-radius: 8px;
   overflow: hidden;
